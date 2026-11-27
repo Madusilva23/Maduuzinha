@@ -1,65 +1,470 @@
-VELOCIDADE • TECNOLOGIA • PAIXÃO
-O MUNDO DA
-FÓRMULA 1
-Onze equipes. Vinte e dois pilotos. Uma temporada cheia de velocidade, estratégia e emoção.
 
-EXPLORAR A GRID →Conheça a história ↓
-1950ANO DE CRIAÇÃO
-11EQUIPES EM 2026
-22PILOTOS NO GRID
-01/ 26
-FORMULA 1 2026
-BUILT FOR
-THE FAST
-▧ ▨ ▧ ▨ ▧ ▨
-✦✧✳
-SCROLL TO DISCOVER ⌄
-01 — ORIGENS
-Uma história de velocidade
-DESDE 1950
-A Fórmula 1 é a principal categoria do automobilismo mundial, reunindo tecnologia de ponta, talento e competição em circuitos espalhados pelo planeta.
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-O Campeonato Mundial de Fórmula 1 começou em 1950. A primeira corrida oficial aconteceu em 13 de maio, no circuito de Silverstone, no Reino Unido. O italiano Giuseppe Farina foi o primeiro campeão mundial da categoria.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Ao longo das décadas, a F1 evoluiu: os carros ficaram mais rápidos e seguros, as equipes desenvolveram soluções aerodinâmicas e os pilotos passaram a contar com sistemas eletrônicos cada vez mais avançados.
+    <title>F1 WORLD | The Ultimate Paddock</title>
 
-Hoje, cada Grande Prêmio combina velocidade, estratégia nos boxes, gerenciamento de pneus e decisões tomadas em frações de segundo.
+    <link rel="stylesheet" href="style.css">
 
-Explore o site oficial da F1 ↗
-1950
-O começoPrimeira temporada do Campeonato Mundial.
-1950–70
-Uma nova eraGrandes rivalidades e evolução dos carros.
-1980–2000
-Tecnologia em altaAerodinâmica, eletrônica e segurança avançam.
-2026
-Uma nova geraçãoOnze equipes disputam a temporada, com a estreia da Cadillac.
-✦
-02 — CONSTRUTORES
-Conheça as equipes
-11 ESCUDERIAS
-Cada equipe tem sua identidade, suas cores e uma dupla de pilotos pronta para acelerar.
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
 
-03 — LINE-UP
-Os pilotos de 2026
-A GRID COMPLETA
-Conheça os nomes que representam as onze equipes nesta temporada.
+<body>
 
-Buscar piloto ou equipe...
+<header>
 
-Todas as equipes
-As imagens são carregadas de páginas públicas de referência. Caso alguma não apareça, o cartão mantém a identificação do piloto.
+    <div class="logo">F1 <span>WORLD</span></div>
 
-04 — CAMPEONATO
-A classificação
-ATUALIZADA • 22 NOV 2026
-PilotosConstrutores
-Pontuação consultada após o Grande Prêmio de Las Vegas, em 22 de novembro de 2026. A classificação pode mudar nas etapas seguintes.
+    <nav id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#equipes">Equipes</a>
+        <a href="#pilotos">Pilotos</a>
+        <a href="#historia">História</a>
+        <a href="#circuitos">Circuitos</a>
+    </nav>
 
-LIGHTS OUT & AWAY WE GO
-A corrida nunca para.
-Mais do que velocidade: estratégia, precisão e paixão em cada volta.
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-VOLTAR AO TOPO ↑
-▧ ▨ ▧ ▨ ▧ ▨ ▧ ▨
-F1UNIVERSETHE 2026 GRIDProjeto informativo • Fórmula 1 — Temporada 2026FEITO PARA QUEM AMA VELOCIDADE ✦
+</header>
+
+<main>
+
+<!-- APRESENTAÇÃO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <p class="subtitle">THE WORLD OF MOTORSPORT</p>
+
+        <h1>
+            THE WORLD OF
+            <span>FORMULA 1</span>
+        </h1>
+
+        <p>
+            A Fórmula 1 é muito mais do que uma competição
+            automobilística. É um universo de velocidade,
+            tecnologia, estratégia, talento e superação.
+
+            Conheça as equipes, descubra a trajetória dos pilotos
+            e explore a história de uma das maiores categorias
+            esportivas do mundo.
+        </p>
+
+        <a href="#equipes" class="btn">
+            EXPLORAR O PADDOCK →
+        </a>
+
+    </div>
+
+    <div class="car-animation">🏎️</div>
+    <div class="hero-number">F1</div>
+
+</section>
+
+<!-- EQUIPES -->
+
+<section class="section" id="equipes">
+
+    <div class="section-title">
+
+        <p>THE PADDOCK</p>
+
+        <h2>
+            CONHEÇA AS
+            <span>ESCUDERIAS</span>
+        </h2>
+
+        <p class="description">
+            A Fórmula 1 reúne equipes de diferentes países,
+            cada uma com sua própria história, identidade,
+            tradição e filosofia de competição.
+
+            Conheça as onze escuderias, suas origens,
+            suas cores e os pilotos que representam
+            cada organização nas pistas.
+        </p>
+
+    </div>
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Pesquisar equipe ou piloto..."
+        >
+
+    </div>
+
+    <div class="team-container" id="teamContainer"></div>
+
+    <p class="grid-note">
+        Clique em uma equipe para descobrir sua história,
+        seus pilotos e suas principais características.
+    </p>
+
+</section>
+
+<!-- PILOTOS -->
+
+<section class="drivers-section" id="pilotos">
+
+    <div class="section-title">
+
+        <p>BEHIND THE VISOR</p>
+
+        <h2>
+            OS GRANDES
+            <span>PILOTOS</span>
+        </h2>
+
+        <p class="description">
+            Por trás de cada carro existe um profissional
+            que dedica sua vida ao automobilismo.
+
+            Os pilotos representam suas equipes, participam
+            do desenvolvimento dos carros e enfrentam desafios
+            físicos, técnicos e estratégicos durante as corridas.
+        </p>
+
+    </div>
+
+    <div class="drivers-intro">
+
+        <div class="driver-symbol">🏁</div>
+
+        <div>
+
+            <h3>Talento, coragem e determinação</h3>
+
+            <p>
+                Para chegar à Fórmula 1, muitos pilotos começam
+                ainda crianças no kart. Depois, passam por
+                categorias de formação, como Fórmula 4,
+                Fórmula 3 e Fórmula 2.
+
+                Esse caminho exige dedicação, preparação,
+                conhecimento técnico e capacidade de trabalhar
+                em equipe.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="driver-list" id="driverList"></div>
+
+</section>
+
+<!-- HISTÓRIA GERAL DA F1 -->
+
+<section class="section history" id="historia">
+
+    <div class="section-title">
+
+        <p>THE LEGACY</p>
+
+        <h2>
+            A HISTÓRIA DA
+            <span>FÓRMULA 1</span>
+        </h2>
+
+        <p class="description">
+            Uma trajetória construída ao longo de décadas,
+            marcada por grandes campeões, inovações,
+            transformações tecnológicas e momentos que
+            mudaram para sempre o automobilismo.
+        </p>
+
+    </div>
+
+    <div class="history-content">
+
+        <article>
+
+            <span>ANTES DE 1950</span>
+
+            <h3>As origens do automobilismo</h3>
+
+            <p>
+                As competições automobilísticas já existiam
+                muito antes da criação oficial da Fórmula 1.
+                Durante as primeiras décadas do século XX,
+                diferentes países organizavam corridas e
+                Grandes Prêmios.
+
+                Com o desenvolvimento dos automóveis,
+                as competições passaram a atrair fabricantes,
+                pilotos e espectadores interessados em
+                velocidade e inovação.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>1950</span>
+
+            <h3>O nascimento do Campeonato Mundial</h3>
+
+            <p>
+                Em 1950, foi criado o Campeonato Mundial
+                de Pilotos da Fórmula 1, organizado sob
+                as regras da Federação Internacional
+                do Automóvel, a FIA.
+
+                A primeira corrida do campeonato aconteceu
+                em 13 de maio de 1950, no circuito de
+                Silverstone, na Inglaterra.
+
+                O italiano Giuseppe Farina tornou-se
+                o primeiro campeão mundial da categoria.
+                A temporada inaugural marcou o início
+                de uma história que continua até hoje.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>ANOS 50 E 60</span>
+
+            <h3>Os primeiros grandes campeões</h3>
+
+            <p>
+                Os primeiros anos da Fórmula 1 foram
+                marcados por pilotos como Juan Manuel Fangio,
+                Alberto Ascari e Stirling Moss.
+
+                As equipes começaram a desenvolver
+                tecnologias específicas para as corridas.
+                O posicionamento do motor, a distribuição
+                de peso e a aerodinâmica passaram a ter
+                importância cada vez maior.
+
+                Foi também um período de crescimento
+                internacional da competição.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>ANOS 70</span>
+
+            <h3>A evolução dos carros e das equipes</h3>
+
+            <p>
+                Durante a década de 1970, a Fórmula 1
+                passou por grandes transformações.
+                Novos conceitos aerodinâmicos modificaram
+                o desempenho dos carros e as equipes
+                começaram a investir ainda mais em
+                pesquisa e desenvolvimento.
+
+                Nomes como Emerson Fittipaldi, Niki Lauda
+                e James Hunt marcaram esse período.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>ANOS 80 E 90</span>
+
+            <h3>Rivalidades e momentos históricos</h3>
+
+            <p>
+                As décadas de 1980 e 1990 ficaram
+                conhecidas por grandes rivalidades.
+                Ayrton Senna, Alain Prost, Nelson Piquet,
+                Nigel Mansell e Michael Schumacher
+                fizeram parte de uma geração marcante.
+
+                A McLaren, a Ferrari e a Williams
+                protagonizaram disputas históricas.
+                A segurança também passou a receber
+                atenção cada vez maior, com mudanças
+                importantes nos regulamentos e nos carros.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>ANOS 2000</span>
+
+            <h3>A era de grandes recordes</h3>
+
+            <p>
+                O início do século XXI foi marcado
+                pelo domínio de Michael Schumacher
+                na Ferrari, que conquistou cinco títulos
+                consecutivos entre 2000 e 2004.
+
+                Fernando Alonso também ganhou destaque
+                ao conquistar os campeonatos de 2005
+                e 2006 pela Renault.
+
+                A tecnologia, a telemetria e a preparação
+                física dos pilotos ganharam ainda mais
+                importância.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>2010–2020</span>
+
+            <h3>Uma nova geração de campeões</h3>
+
+            <p>
+                A década de 2010 trouxe mudanças
+                importantes nos motores e nos regulamentos.
+                A Mercedes construiu uma fase de domínio
+                a partir de 2014, com Lewis Hamilton
+                e Nico Rosberg.
+
+                Posteriormente, Max Verstappen passou
+                a protagonizar uma nova fase de disputas
+                e conquistas pela Red Bull Racing.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>ATUALIDADE</span>
+
+            <h3>O futuro da Fórmula 1</h3>
+
+            <p>
+                A Fórmula 1 continua evoluindo.
+                Os carros utilizam sistemas híbridos,
+                tecnologias avançadas e soluções
+                voltadas à eficiência energética.
+
+                A segurança dos pilotos, a sustentabilidade,
+                a análise de dados e o desenvolvimento
+                de novos motores são temas fundamentais.
+
+                Com novas equipes, novos talentos e
+                diferentes desafios tecnológicos, a categoria
+                continua ampliando sua presença mundial.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CIRCUITOS -->
+
+<section class="section circuits" id="circuitos">
+
+    <div class="section-title">
+
+        <p>RACE TRACKS</p>
+
+        <h2>
+            CIRCUITOS
+            <span>FAMOSOS</span>
+        </h2>
+
+        <p class="description">
+            Os circuitos são parte fundamental da identidade
+            da Fórmula 1. Cada pista apresenta características
+            diferentes, exigindo estratégias específicas
+            de pilotos e equipes.
+        </p>
+
+    </div>
+
+    <div class="circuit-container">
+
+        <div class="circuit-card">
+            <span>🇮🇹</span>
+            <h3>MONZA</h3>
+            <p>Itália — Conhecido por suas longas retas
+            e tradição automobilística.</p>
+        </div>
+
+        <div class="circuit-card">
+            <span>🇲🇨</span>
+            <h3>MONTE CARLO</h3>
+            <p>Mônaco — Um circuito de rua que exige
+            precisão e concentração.</p>
+        </div>
+
+        <div class="circuit-card">
+            <span>🇧🇪</span>
+            <h3>SPA-FRANCORCHAMPS</h3>
+            <p>Bélgica — Famoso por suas curvas
+            e mudanças de elevação.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- JANELA INTERATIVA DAS EQUIPES -->
+
+<div class="modal" id="teamModal">
+
+    <div class="modal-content" id="modalContent">
+
+        <div class="modal-header" id="modalHeader">
+
+            <h2 id="modalTitle">Equipe</h2>
+
+            <button
+                class="close-modal"
+                onclick="fecharEquipe()"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <div class="modal-body" id="modalBody"></div>
+
+    </div>
+
+</div>
+
+<!-- RODAPÉ -->
+
+<footer>
+
+    <h2><strong>F1 WORLD</strong></h2>
+
+    <p>
+        Um projeto dedicado à história, às equipes,
+        aos pilotos e à paixão pela Fórmula 1.
+    </p>
+
+    <p>
+        Projeto educacional independente.
+        Não possui vínculo oficial com a Fórmula 1,
+        a FIA ou as equipes.
+    </p>
+
+    <p>© 2026 F1 WORLD — THE ULTIMATE PADDOCK</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
